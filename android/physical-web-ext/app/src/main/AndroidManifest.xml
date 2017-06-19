@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.physical_web.physicalweb" >
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- This is required for the scan library. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/CustomAppTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="it.poliba.sisinflab.annotationmanager.annotationviewer.ShowDescriptionActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" >
+        </activity>
+        <activity
+            android:name="it.poliba.sisinflab.physicalweb.settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="it.poliba.sisinflab.filebrowser.BrowseFileActivity"
+            android:label="@string/browse_file"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" >
+        </activity>
+
+
+        <!--
+        <activity
+            android:name="it.poliba.sisinflab.annotationbuilder.BuildSemanticDescription"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="sisinflab.annotationBuilder.BuildElement"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+        </activity>
+        -->
+
+        <service
+            android:name=".UriBeaconDiscoveryService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".UriBeaconSemanticDiscoveryService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- This is required for the scan library. -->
+        <service
+            android:name="org.uribeacon.scan.compat.ScanWakefulService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="org.uribeacon.config.GattService"
+            android:exported="false" >
+        </service>
+
+        <!-- This is required for the scan library. -->
+        <receiver android:name="org.uribeacon.scan.compat.ScanWakefulBroadcastReceiver" >
+        </receiver>
+
+        <activity
+            android:name=".OobActivity"
+            android:label="@string/title_activity_oob"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" >
+        </activity>
+
+        <activity
+            android:name=".BeaconWebActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" >
+        </activity>
+    </application>
+
+</manifest>

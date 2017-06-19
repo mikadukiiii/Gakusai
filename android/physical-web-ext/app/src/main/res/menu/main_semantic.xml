@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+
+<!--
+    <item android:title="@string/discovery"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/action_discovery"/>
+
+    <item android:title="@string/bookmarks"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/action_bookmarks"/>
+
+    <item android:title="@string/history"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/action_history"/>
+
+    <item android:title="@string/spam"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/action_spam"/>
+
+    <item android:title="@string/action_settings"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/action_settings"/>
+
+    <item android:title="@string/action_network"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/action_network"/>
+
+    <item android:title="@string/action_about"
+          app:showAsAction="never"
+          android:orderInCategory="100"
+          android:id="@+id/action_about"/>
+
+          -->
+
+</menu>

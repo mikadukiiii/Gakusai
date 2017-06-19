@@ -1,0 +1,56 @@
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#"	
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl"/>
+	</owl:Ontology>
+	<owl:AnnotationProperty rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#icon"/>
+	<owl:AnnotationProperty	rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#url"/>
+	<rdf:Description rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#RossoPomodoro">
+		<url>http://web.rossopomodoro.it/italiano/default.aspx</url>
+		<rdf:type>
+			<owl:Class>
+				<owl:intersectionOf	rdf:parseType="Collection">
+					<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Activity"/>
+					<owl:Restriction>
+						<owl:onProperty	rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#isToEat"/>
+						<owl:allValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf	rdf:parseType="Collection">
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Pasta"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Pizza"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Salad"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Burger"/>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:allValuesFrom>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty	rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#isToDrink"/>
+						<owl:allValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf	rdf:parseType="Collection">
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Water"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Coke"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Beer"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Wine"/>
+									<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Alcohol"/>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:allValuesFrom>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty	rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#occursIn"/>
+						<owl:allValuesFrom rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Restaurant"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#occursIn"/>
+						<owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdf:type>
+	</rdf:Description>
+</rdf:RDF>

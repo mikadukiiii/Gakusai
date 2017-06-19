@@ -1,0 +1,34 @@
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#"	
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl"/>
+	</owl:Ontology>
+	<rdf:Description rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Scenario1">
+		<rdf:type>
+			<owl:Class>
+				<owl:intersectionOf	rdf:parseType="Collection">
+					<owl:Class rdf:about="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Activity"/>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#isToBuy"/>
+						<owl:allValuesFrom rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Shoes"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty	rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#isForCustomer"/>
+						<owl:allValuesFrom rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Man"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty	rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#occursIn"/>
+						<owl:allValuesFrom rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#Store"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://sisinflab.poliba.it/ieva/PhysicalWeb/shopping.owl#occursIn"/>
+						<owl:minCardinality	rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdf:type>
+	</rdf:Description>
+</rdf:RDF>

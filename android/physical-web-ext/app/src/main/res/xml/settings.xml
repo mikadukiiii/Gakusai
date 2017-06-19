@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content">
+  	<PreferenceCategory android:title="@string/semantics">
+  	    <!--<Preference
+  	        android:key="@string/ontology_path_key"
+            android:title="@string/ontology_path_title"
+  	        />-->
+        <Preference
+            android:key="@string/request_path_key"
+            android:title="@string/request_path_title"
+            />
+        <Preference
+            android:title="@string/visualize_request_title"
+            android:key="@string/visualize_request_key"
+            />
+  	</PreferenceCategory>
+
+  	<!--<PreferenceCategory android:title="@string/calibration">
+  	    <Preference
+            android:title="@string/calibration_title"
+            android:key="@string/calibration_key"
+            android:summary="@string/calibration_summary"
+  	        />
+  	</PreferenceCategory> -->
+	<PreferenceCategory android:title="@string/about">
+		<Preference 
+		    android:title="@string/send_feedback_title"
+		    android:key="@string/send_feedback_key"/>
+	</PreferenceCategory>
+	
+</PreferenceScreen>

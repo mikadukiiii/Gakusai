@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/personImage"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true" />
+    
+    <ImageView
+        android:id="@+id/Concept"
+        android:layout_width="64px"
+        android:layout_height="64px"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="3px" />
+
+    <TextView
+        android:id="@+id/personName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/type"
+        android:layout_centerVertical="true"
+        android:text="Nome"
+        android:paddingLeft="3px"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

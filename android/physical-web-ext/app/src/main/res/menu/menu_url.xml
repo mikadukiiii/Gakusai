@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+
+    <item android:id="@+id/visualize_resource"
+        android:title="@string/visualize_resource"
+        android:orderInCategory="1"
+       />
+    <item android:id="@+id/add_bookmark"
+        android:title="@string/add_bookmark"
+        android:orderInCategory="2"
+        />
+    <item android:id="@+id/mark_spam"
+        android:title="@string/mark_spam"
+        android:orderInCategory="3"
+        />
+
+    <item android:id="@+id/performances"
+        android:title="@string/performances"
+        android:orderInCategory="4"
+        />
+        -->
+</menu>

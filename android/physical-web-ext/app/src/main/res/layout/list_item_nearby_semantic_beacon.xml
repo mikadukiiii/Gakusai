@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:paddingLeft="50dp"
+              android:paddingRight="50dp"
+              android:paddingTop="50dp"
+              android:paddingBottom="50dp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+    >
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:gravity="center" >
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#ffffff"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:background="@drawable/button4">
+            </TextView>
+            <TextView
+                    android:id="@+id/url"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/url_color"
+                    android:maxLines="1"
+                    android:ellipsize="end">
+            </TextView>
+            <TextView
+                android:id="@+id/annotation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/holo_red_dark"
+                android:ellipsize="end">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/nearby_beacon_favicon_content_description">
+            </ImageView>
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/holo_blue_dark"
+                android:maxLines="1">
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:fontFamily="arial-sans-serif"
+                android:textColor="@color/description_color"
+                android:lines="2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="1.5dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ranging_debug_container"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#bbbbbb"
+            android:id="@+id/ranging_debug_tx_power"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#bbbbbb"
+            android:id="@+id/ranging_debug_rssi"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#bbbbbb"
+            android:id="@+id/ranging_debug_distance"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#bbbbbb"
+            android:id="@+id/ranging_debug_region"/>
+    </LinearLayout>
+
+</LinearLayout>
